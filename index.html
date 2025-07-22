@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colorful College Website</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      padding: 20px;
+      text-align: center;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #4a148c;
+    }
+
+    .about, .courses, .facilities {
+      background-color: rgba(255, 255, 255, 0.8);
+      margin: 20px auto;
+      border-radius: 15px;
+      max-width: 1000px;
+      padding: 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .course-list, .facility-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      width: 250px;
+      margin: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #ffffffcc;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #999;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #7b1fa2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #4a0072;
+    }
+
+    footer {
+      text-align: center;
+      background: #4a148c;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Rainbow Valley College</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#courses">Courses</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2 class="section-title">About Us</h2>
+    <p>Welcome to Rainbow Valley College, a place where learning meets innovation. We offer high-quality education, a vibrant campus life, and opportunities to grow in all aspects.</p>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="courses">
+    <h2 class="section-title">Our Courses</h2>
+    <div class="course-list">
+      <div class="card">Computer Science</div>
+      <div class="card">Business Administration</div>
+      <div class="card">Mass Communication</div>
+      <div class="card">Fashion Designing</div>
+      <div class="card">Hotel Management</div>
+      <div class="card">Biotechnology</div>
+    </div>
+  </section>
+
+  <!-- Facilities Section -->
+  <section id="facilities" class="facilities">
+    <h2 class="section-title">Campus Facilities</h2>
+    <div class="facility-list">
+      <div class="card">Library</div>
+      <div class="card">Modern Labs</div>
+      <div class="card">Wi-Fi Campus</div>
+      <div class="card">Cafeteria</div>
+      <div class="card">Auditorium</div>
+      <div class="card">Sports Ground</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Rainbow Valley College. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Form -->
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you! Your message has been received.");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
